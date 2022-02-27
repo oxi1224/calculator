@@ -352,13 +352,21 @@ body {
     border-spacing: 15px;
   }
   .main-box #input table td {
-    padding: 1rem 1.5rem;
-    max-width: 70px;
-    max-height: 50px;
+    padding: 1rem;
+    min-width: 70px;
+    min-height: 40px;
     border-radius: 5px;
   }
   .main-box #input table #del {
     padding: 0;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .main-box #input table td {
+    min-width: 50px;
+    font-size: 20px;
+    max-height: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */
