@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Oxi</a>.
+  </div>
+<div class="main-box">
+  <div class="top-content">
+    <div class="top-content-text">
+      <h1>calc</h1>
+      <h3>THEME</h3>
+    </div>
+    <div class="theme-switch">
+      <div class="switch">
+        <div class="num1 switch-num">1</div>
+        <div class="num2 switch-num">2</div>
+        <div class="num3 switch-num">3</div>
+        <div id="switch-field">
+          <div id="switch-ball"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="calculator-box">
+    <div id="output"></div>
+    <div id="input">
+      <table>
+        <tr>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td id="del">DEL</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>+</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td class="row-4">.</td>
+          <td class="row-4">0</td>
+          <td class="row-4">/</td>
+          <td class="row-4">x</td>
+        </tr>
+        <tr>
+          <td id="reset" colspan="2">RESET</td>
+          <td id="equals" colspan="2">=</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

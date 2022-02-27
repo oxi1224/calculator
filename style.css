@@ -1,0 +1,364 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+* {
+  font-family: 'Spartan', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0fr;
+}
+
+body {
+  background-color: #3a4764;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.main-box {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.main-box .top-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-box .top-content .top-content-text {
+  display: table;
+  width: 80%;
+}
+
+.main-box .top-content .top-content-text h1 {
+  display: table-cell;
+  color: white;
+  width: 50%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  vertical-align: bottom;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.main-box .top-content .top-content-text h3 {
+  display: table-cell;
+  color: white;
+  font-size: 12px;
+  width: 80%;
+  vertical-align: bottom;
+  text-align: right;
+  line-height: 20px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.main-box .top-content .theme-switch {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.main-box .top-content .theme-switch .switch {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  color: white;
+}
+
+.main-box .top-content .theme-switch .switch .num1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.main-box .top-content .theme-switch .switch .num2 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.main-box .top-content .theme-switch .switch .num3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.main-box .top-content .theme-switch .switch .switch-num {
+  font-size: 10px;
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 10px;
+  position: relative;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.main-box .top-content .theme-switch .switch #switch-field {
+  position: relative;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 2 / 1 / 3 / 4;
+  background-color: #232c43;
+  border-radius: 100px;
+  width: 70px;
+  height: 25px;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.main-box .top-content .theme-switch .switch #switch-field #switch-ball {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  background-color: #d03f2f;
+  content: '';
+  height: 60%;
+  width: 20%;
+  border-radius: 500px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.main-box #output {
+  background-color: #182034;
+  padding: 2rem;
+  font-size: 40px;
+  color: white;
+  border-radius: 10px;
+  width: 100%;
+  text-align: right;
+  margin-top: 30px;
+  min-height: 111px;
+  max-height: 111px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.main-box #input {
+  background-color: #232c43;
+  margin-top: 25px;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 30px;
+  color: #232c43;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.main-box #input table {
+  text-align: center;
+  border-spacing: 25px;
+}
+
+.main-box #input table td {
+  background-color: #eae3dc;
+  border-radius: 10px;
+  padding: 0.5rem 2rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-shadow: 0 5px 0 0px #b4a597;
+          box-shadow: 0 5px 0 0px #b4a597;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  position: relative;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.main-box #input table td td > * {
+  position: relative;
+  z-index: 3;
+}
+
+.main-box #input table td:hover {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+.main-box #input #reset, .main-box #input #equals, .main-box #input #del {
+  font-size: 20px;
+  color: white;
+}
+
+.main-box #input #reset, .main-box #input #equals {
+  padding: 1rem;
+}
+
+.main-box #input #reset, .main-box #input #del {
+  background-color: #637097;
+  -webkit-box-shadow: 0 5px 0 0px #404e72;
+          box-shadow: 0 5px 0 0px #404e72;
+}
+
+.main-box #input #equals {
+  background-color: #d03f2f;
+  -webkit-box-shadow: 0 5px 0 0px #93261a;
+          box-shadow: 0 5px 0 0px #93261a;
+}
+
+.theme2 {
+  background-color: #e6e6e6;
+}
+
+.theme2 .main-box .top-content .top-content-text h1 {
+  color: black;
+}
+
+.theme2 .main-box .top-content .top-content-text h3 {
+  color: black;
+}
+
+.theme2 .main-box .top-content .theme-switch .switch-num {
+  color: black;
+}
+
+.theme2 .main-box .top-content .theme-switch #switch-field {
+  background-color: #d1cccc;
+}
+
+.theme2 .main-box .calculator-box #output {
+  background-color: white;
+  color: black;
+}
+
+.theme2 .main-box .calculator-box #input {
+  background-color: #d1cccc;
+}
+
+.theme2 .main-box .calculator-box #input td {
+  background-color: #e5e4e1;
+  -webkit-box-shadow: 0 5px 0 0px #a69d91;
+          box-shadow: 0 5px 0 0px #a69d91;
+}
+
+.theme2 .main-box .calculator-box #input #reset, .theme2 .main-box .calculator-box #input #del {
+  background-color: #377f86;
+  -webkit-box-shadow: 0 5px 0 0px #1b5f65;
+          box-shadow: 0 5px 0 0px #1b5f65;
+}
+
+.theme2 .main-box .calculator-box #input #equals {
+  background-color: #ca5502;
+  -webkit-box-shadow: 0 5px 0 0px #893901;
+          box-shadow: 0 5px 0 0px #893901;
+}
+
+.theme3 {
+  background-color: #160628;
+}
+
+.theme3 .main-box .top-content .top-content-text h1 {
+  color: #ffe53d;
+}
+
+.theme3 .main-box .top-content .top-content-text h3 {
+  color: #ffe53d;
+}
+
+.theme3 .main-box .top-content .theme-switch .switch-num {
+  color: #ffe53d;
+}
+
+.theme3 .main-box .top-content .theme-switch #switch-field {
+  background-color: #1d0934;
+}
+
+.theme3 .main-box .top-content .theme-switch #switch-field #switch-ball {
+  background-color: #00e0d1;
+}
+
+.theme3 .main-box .calculator-box #output {
+  background-color: #1d0934;
+  color: #ffe53d;
+}
+
+.theme3 .main-box .calculator-box #input {
+  background-color: #1d0934;
+}
+
+.theme3 .main-box .calculator-box #input td {
+  background-color: #341c4f;
+  -webkit-box-shadow: 0 5px 0 0px #871c9c;
+          box-shadow: 0 5px 0 0px #871c9c;
+  color: #ffe53d;
+}
+
+.theme3 .main-box .calculator-box #input #reset, .theme3 .main-box .calculator-box #input #del {
+  background-color: #58077d;
+  -webkit-box-shadow: 0 5px 0 0px #bc15f4;
+          box-shadow: 0 5px 0 0px #bc15f4;
+}
+
+.theme3 .main-box .calculator-box #input #equals {
+  background-color: #00e0d1;
+  -webkit-box-shadow: 0 5px 0 0px #6cf9f2;
+          box-shadow: 0 5px 0 0px #6cf9f2;
+  color: black;
+}
+
+@media screen and (max-width: 510px) {
+  .main-box {
+    padding-top: 10px;
+    max-width: 90%;
+  }
+  .main-box .top-content .top-content-text {
+    width: 75%;
+  }
+  .main-box #output {
+    min-height: 90px;
+    max-height: 90px;
+    font-size: 30px;
+  }
+  .main-box #input table {
+    border-spacing: 15px;
+  }
+  .main-box #input table td {
+    padding: 1rem 1.5rem;
+    max-width: 70px;
+    max-height: 50px;
+    border-radius: 5px;
+  }
+  .main-box #input table #del {
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

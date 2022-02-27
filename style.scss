@@ -1,0 +1,254 @@
+
+.attribution { font-size: 11px; text-align: center; position: absolute;}
+.attribution a { color: hsl(228, 45%, 44%); }
+*{
+    font-family: 'Spartan', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0fr;
+}
+body{
+    background-color: hsl(222, 26%, 31%);
+    transition: all 0.5s ease;
+}
+.main-box{
+    width: fit-content;
+    margin: 0 auto;
+    padding-top: 20px;
+    .top-content{
+        display: flex;
+        justify-content: space-between;
+        .top-content-text{
+            display: table;
+            width: 80%;
+            h1{
+                display: table-cell;
+                color: white;
+                width: 50%;
+                width: fit-content;
+                vertical-align: bottom;
+                transition: all 0.5s ease;
+            }
+            h3{
+                display: table-cell;
+                color: white;
+                font-size: 12px;
+                width: 80%;
+                vertical-align: bottom;
+                text-align: right;
+                line-height: 20px;
+                transition: all 0.5s ease;
+            }
+        }
+        .theme-switch{
+            width: fit-content;
+            .switch {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+                color: white;
+                .num1 { grid-area: 1 / 1 / 2 / 2;}
+                .num2 { grid-area: 1 / 2 / 2 / 3;}
+                .num3 { grid-area: 1 / 3 / 2 / 4;}
+                .switch-num{
+                    font-size: 10px; 
+                    text-align: center; 
+                    height: fit-content;
+                    top: 10px;
+                    position: relative;
+                    transition: all 0.5s ease;
+                }
+                #switch-field { 
+                    position: relative;
+                    grid-area: 2 / 1 / 3 / 4;
+                    background-color: hsl(223, 31%, 20%);
+                    border-radius: 100px;
+                    width: 70px;
+                    height: 25px;
+                    overflow: hidden;
+                    cursor: pointer;
+                    transition: all 0.5s ease;
+                    #switch-ball{
+                        position: absolute;
+                        left: 5px;
+                        top: 5px;
+                        background-color: hsl(6, 63%, 50%);
+                        content: '';
+                        height: 60%;
+                        width: 20%;
+                        border-radius: 500px;
+                        transition: 0.5s ease;
+                        transition: all 0.5s ease;
+                    }
+                }
+            }    
+        }
+    }
+    #output{
+        background-color: hsl(224, 36%, 15%);
+        padding: 2rem;
+        font-size: 40px;
+        color: white;
+        border-radius: 10px;
+        width: 100%;
+        text-align: right;
+        margin-top: 30px;
+        min-height: 111px;
+        max-height: 111px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        transition: all 0.5s ease;
+    }
+    #input{
+        background-color: hsl(223, 31%, 20%);
+        margin-top: 25px;
+        border-radius: 10px;
+        width: 100%;
+        font-size: 30px;
+        color: hsl(223, 31%, 20%);
+        transition: all 0.5s ease;
+        table{
+            text-align: center;
+            border-spacing: 25px;
+            td{
+                background-color: hsl(30, 25%, 89%);
+                border-radius: 10px;
+                padding: 0.5rem 2rem;
+                height: fit-content;
+                box-shadow: 0 5px 0 0px hsl(28, 16%, 65%);
+                cursor: pointer;
+                transition: 0.5s ease;
+                position: relative;
+                td > *{position: relative; z-index: 3;}
+                transition: all 0.5s ease;
+                &:hover{
+                    filter: brightness(80%);
+                }
+            }
+        }
+        #reset, #equals, #del{
+            font-size: 20px;
+            color: white;
+        }
+        #reset, #equals{
+            padding: 1rem;
+        }
+        #reset, #del{
+            background-color: hsl(225, 21%, 49%);
+            box-shadow: 0 5px 0 0px hsl(224, 28%, 35%);
+        }
+        #equals{
+            background-color: hsl(6, 63%, 50%);
+            box-shadow: 0 5px 0 0px hsl(6, 70%, 34%);
+        }
+    }
+}
+.theme2{
+    background-color: hsl(0, 0%, 90%);
+    .main-box{
+        .top-content{
+            .top-content-text{
+                h1{color: black;}
+                h3{color: black;}
+            }
+            .theme-switch{
+                .switch-num{color: black;}
+                #switch-field{background-color: hsl(0, 5%, 81%);}
+            }
+        }
+        .calculator-box{
+            #output{
+                background-color: white;
+                color: black;
+            }
+            #input{
+                background-color: hsl(0, 5%, 81%);
+                td{
+                    background-color: hsl(45, 7%, 89%);
+                    box-shadow: 0 5px 0 0px hsl(35, 11%, 61%);
+                }
+                #reset, #del{
+                    background-color: hsl(185, 42%, 37%);
+                    box-shadow: 0 5px 0 0px hsl(185, 58%, 25%);
+                }
+                #equals{
+                    background-color: hsl(25, 98%, 40%);
+                    box-shadow: 0 5px 0 0px hsl(25, 99%, 27%);
+                }
+            }
+        }
+    }
+}
+.theme3{
+    background-color: hsl(268, 75%, 9%);
+    .main-box{
+        .top-content{
+            .top-content-text{
+                h1{color: hsl(52, 100%, 62%);}
+                h3{color: hsl(52, 100%, 62%);}
+            }
+            .theme-switch{
+                .switch-num{color: hsl(52, 100%, 62%);}
+                #switch-field{
+                    background-color: hsl(268, 71%, 12%);
+                    #switch-ball{background-color: hsl(176, 100%, 44%);}
+                }
+            }
+        }
+        .calculator-box{
+            #output{
+                background-color: hsl(268, 71%, 12%);
+                color: hsl(52, 100%, 62%);
+            }
+            #input{
+                background-color: hsl(268, 71%, 12%);
+                td{
+                    background-color: hsl(268, 47%, 21%);
+                    box-shadow: 0 5px 0 0px hsl(290, 70%, 36%);
+                    color: hsl(52, 100%, 62%);
+                }
+                #reset, #del{
+                    background-color: hsl(281, 89%, 26%);
+                    box-shadow: 0 5px 0 0px hsl(285, 91%, 52%);
+                }
+                #equals{
+                    background-color: hsl(176, 100%, 44%);
+                    box-shadow: 0 5px 0 0px hsl(177, 92%, 70%);
+                    color: black;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 510px) {
+    .main-box{
+        padding-top: 10px;
+        .top-content{
+            .top-content-text{
+                width: 75%;
+            }
+        }
+        max-width: 90%;
+        #output{
+            min-height: 90px;
+            max-height: 90px;
+            font-size: 30px;
+        }
+        #input{
+            table{
+                border-spacing: 15px;
+                td{
+                    padding: 1rem 1.5rem;
+                    max-width: 70px;
+                    max-height: 50px;
+                    border-radius: 5px;
+                }
+                #del{
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
