@@ -235,6 +235,7 @@ body{
             min-height: 90px;
             max-height: 90px;
             font-size: 30px;
+            max-width: 355px;
         }
         #input{
             table{
@@ -254,6 +255,9 @@ body{
 }
 @media screen and (max-width: 380px) {
     .main-box{
+        #output{
+            max-width: 275px;
+        }
         #input{
             table{
                 td{
