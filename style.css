@@ -169,6 +169,7 @@ body {
   overflow-y: hidden;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  max-width: 488px;
 }
 
 .main-box #input {
