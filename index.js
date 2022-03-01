@@ -21,11 +21,19 @@ function calculator() {
                         }
                     }
                     outputEl.textContent = eval(output.join(''));
+                    if (["NaN", "Infinity"].includes(outputEl.textContent)) {
+                        outputEl.textContent = "0";
+                    }
                     output = [...outputEl.textContent];
                 }
             } else {
                 output.push(button.textContent)
                 if (output[0].match(/[0-9]/) || output[0].match('-')){
+                    for (let i = 0; i < output.length; ++i){
+                         if (["+", "-", "x", ".", "/"].includes(output[i]) && ["+", "-", "x", ".", "/"].includes(output[i-1])) {
+                            output.pop();
+                        } 
+                    }
                     outputEl.textContent = output.join('');
                 } else {
                     output.shift();
@@ -36,6 +44,8 @@ function calculator() {
 }
 calculator();
 
+
+// Toggle themes
 function themeToggle() {
     let theme = 1;
     const themeIndicator = document.getElementById("switch-ball"); 
