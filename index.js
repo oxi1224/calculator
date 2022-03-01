@@ -8,26 +8,37 @@ function calculator() {
     buttons.forEach(button => {
         button.addEventListener("click", () => {
             if (["DEL", "RESET", "="].includes(button.textContent)) {
+                // delete the last number or symbol
                 if (button.textContent === "DEL") {
                     output.pop();
                     outputEl.textContent = output.join('');
+                    console.log(output)
+                // Reset the calculator
                 } else if (button.textContent === "RESET") {
                     output.length = 0;
                     outputEl.textContent = output.join('');
                 } else {
+                    // Replace all x's with *
                     for(let i = 0; i < output.length; ++i){
                         if(output[i] === 'x'){
                             output[i] = '*';
                         }
                     }
+                    // calculate the expression
                     outputEl.textContent = eval(output.join(''));
+                    // output erron when dividing by 0
                     if (["NaN", "Infinity"].includes(outputEl.textContent)) {
-                        outputEl.textContent = "0";
+                        outputEl.textContent = "Error";
+                        output = outputEl.textContent.split(" ");
+                        console.log(output);
+                    } else {
+                        output = [...outputEl.textContent];
                     }
-                    output = [...outputEl.textContent];
                 }
             } else {
+                // push the values to the array
                 output.push(button.textContent)
+                // stop users from using more than 1 operator in a row
                 if (output[0].match(/[0-9]/) || output[0].match('-')){
                     for (let i = 0; i < output.length; ++i){
                          if (["+", "-", "x", ".", "/"].includes(output[i]) && ["+", "-", "x", ".", "/"].includes(output[i-1])) {
@@ -43,7 +54,6 @@ function calculator() {
     });
 }
 calculator();
-
 
 // Toggle themes
 function themeToggle() {
