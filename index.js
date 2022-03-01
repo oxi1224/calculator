@@ -37,7 +37,7 @@ function calculator() {
                 // push the values to the array
                 output.push(button.textContent)
                 // stop users from using more than 1 operator in a row
-                if (output[0].match(/[0-9]/) || output[0].match('-') || output[0].match("."){
+                if (output[0].match(/[0-9]/) || output[0].match('-') || output[0].match(".")) {
                     for (let i = 0; i < output.length; ++i){
                          if (["+", "-", "x", ".", "/"].includes(output[i]) && ["+", "x", "/"].includes(output[i-1])) {
                             output.pop();
