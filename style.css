@@ -16,6 +16,11 @@
   padding: 0fr;
 }
 
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
 body {
   background-color: #3a4764;
   -webkit-transition: all 0.5s ease;
@@ -201,6 +206,10 @@ body {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }

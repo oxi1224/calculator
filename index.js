@@ -12,7 +12,6 @@ function calculator() {
                 if (button.textContent === "DEL") {
                     output.pop();
                     outputEl.textContent = output.join('');
-                    console.log(output)
                 // Reset the calculator
                 } else if (button.textContent === "RESET") {
                     output.length = 0;
@@ -30,7 +29,6 @@ function calculator() {
                     if (["NaN", "Infinity"].includes(outputEl.textContent)) {
                         outputEl.textContent = "Error";
                         output = outputEl.textContent.split(" ");
-                        console.log(output);
                     } else {
                         output = [...outputEl.textContent];
                     }

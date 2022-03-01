@@ -7,6 +7,10 @@
     margin: 0;
     padding: 0fr;
 }
+html, body{
+    width: 100vw;
+    height: 100vh;
+}
 body{
     background-color: hsl(222, 26%, 31%);
     transition: all 0.5s ease;
@@ -122,6 +126,7 @@ body{
                 cursor: pointer;
                 transition: 0.5s ease;
                 position: relative;
+                user-select: none;
                 td > *{position: relative; z-index: 3;}
                 transition: all 0.5s ease;
                 &:hover{
