@@ -2,6 +2,9 @@ const outputEl = document.getElementById('output');
 const inputEl = document.getElementById('input');
 const buttons = inputEl.querySelectorAll('td');
 const switchField = document.getElementById("switch-field");
+let startingNum;
+let endingNum;
+let isSet = false;
 
 function calculator() {
     let output = [];
@@ -11,11 +14,11 @@ function calculator() {
                 // delete the last number or symbol
                 if (button.textContent === "DEL") {
                     output.pop();
-                    outputEl.textContent = output.join('');
+                    outputEl.textContent = output.join('').replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 // Reset the calculator
                 } else if (button.textContent === "RESET") {
                     output.length = 0;
-                    outputEl.textContent = output.join('');
+                    outputEl.textContent = output.join('').replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 } else {
                     // Replace all x's with *
                     for(let i = 0; i < output.length; ++i){
@@ -24,7 +27,7 @@ function calculator() {
                         }
                     }
                     // calculate the expression
-                    outputEl.textContent = eval(output.join(''));
+                    outputEl.textContent = eval(output.join('')).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                     // output erron when dividing by 0
                     if (["NaN", "Infinity"].includes(outputEl.textContent)) {
                         outputEl.textContent = "Error";
@@ -37,16 +40,20 @@ function calculator() {
                 // push the values to the array
                 output.push(button.textContent)
                 // stop users from using more than 1 operator in a row
-                if (output[0].match(/[0-9]/) || output[0].match('-')){
+                if (output[0].match(/[0-9]/) || output[0].match('-') || output[0].match(".")) {
                     for (let i = 0; i < output.length; ++i){
-                         if (["+", "-", "x", ".", "/"].includes(output[i]) && ["+", "-", "x", ".", "/"].includes(output[i-1])) {
-                            output.pop();
-                        } 
+                         if (["+", "-", "x", ".", "/"].includes(output[i]) && ["+", "x", "/", "-", "."].includes(output[i-1])) {
+                            if (output[i] === "." && output[i-1] === "-") {
+                                break
+                            } else {
+                                output.pop()
+                            }
+                        }
                     }
-                    outputEl.textContent = output.join('');
                 } else {
                     output.shift();
                 }
+                outputEl.textContent = output.join('').replace(/\B(?=(\d{3})+(?!\d))/g, ',');
             }
         })
     });
