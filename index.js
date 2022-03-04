@@ -32,7 +32,6 @@ function calculator() {
                     }
                     // calculate the expression
                     outputEl.textContent = eval(output.join(''));
-                    outputEl.textContent.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                     // output erron when dividing by 0
                     if (["NaN", "Infinity"].includes(outputEl.textContent)) {
                         outputEl.textContent = "Error";
@@ -40,6 +39,7 @@ function calculator() {
                     } else {
                         output = [...outputEl.textContent];
                     }
+                    outputEl.textContent = outputEl.textContent.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 }
             } else {
                 // push the values to the array
