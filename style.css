@@ -383,4 +383,86 @@ body {
     max-height: 40px;
   }
 }
+
+#troll {
+  position: absolute;
+  z-index: 10;
+  content: '';
+  padding: 10px;
+  color: black;
+  cursor: pointer;
+  left: 0;
+  top: 0;
+}
+
+.amogus {
+  background: url("images/amogus.webp");
+}
+
+.amogus .main-box .top-content .top-content-text h1 {
+  color: white;
+}
+
+.amogus .main-box .top-content .top-content-text h3 {
+  color: white;
+}
+
+.amogus .main-box .top-content .theme-switch .switch-num {
+  color: white;
+}
+
+.amogus .main-box .top-content .theme-switch #switch-field {
+  background-color: #b80000;
+}
+
+.amogus .main-box .top-content .theme-switch #switch-field #switch-ball {
+  background-color: #00e0d1;
+}
+
+.amogus .main-box .calculator-box #output {
+  background-color: #b80000;
+  color: #08f4fd;
+  position: relative;
+  overflow: hidden;
+}
+
+.amogus .main-box .calculator-box #output::before {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  content: '';
+  padding: 40px 100px;
+  border-radius: 40px / 100px;
+  background-color: #17d8e6;
+  border: 1px solid black;
+}
+
+.amogus .main-box .calculator-box #output > * {
+  position: relative;
+}
+
+.amogus .main-box .calculator-box #input {
+  background-color: #b80000;
+}
+
+.amogus .main-box .calculator-box #input td {
+  background-color: red;
+  -webkit-box-shadow: 0 5px 0 0px #940505;
+          box-shadow: 0 5px 0 0px #940505;
+  color: white;
+}
+
+.amogus .main-box .calculator-box #input #reset, .amogus .main-box .calculator-box #input #del {
+  background-color: #00eeff;
+  -webkit-box-shadow: 0 5px 0 0px #04c0cd;
+          box-shadow: 0 5px 0 0px #04c0cd;
+  color: black;
+}
+
+.amogus .main-box .calculator-box #input #equals {
+  background-color: #00eeff;
+  -webkit-box-shadow: 0 5px 0 0px #04c0cd;
+          box-shadow: 0 5px 0 0px #04c0cd;
+  color: black;
+}
 /*# sourceMappingURL=style.css.map */

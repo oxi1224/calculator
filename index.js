@@ -1,7 +1,8 @@
-const outputEl = document.getElementById('output');
+const outputEl = document.getElementById('out');
 const inputEl = document.getElementById('input');
 const buttons = inputEl.querySelectorAll('td');
 const switchField = document.getElementById("switch-field");
+const amogusEl = document.getElementById('troll');
 let startingNum;
 let endingNum;
 let isSet = false;
@@ -20,6 +21,9 @@ function calculator() {
                     output.length = 0;
                     outputEl.textContent = output.join('').replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 } else {
+                    if (outputEl.textContent === "Error"){
+                        return false;
+                    }
                     // Replace all x's with *
                     for(let i = 0; i < output.length; ++i){
                         if(output[i] === 'x'){
@@ -66,20 +70,30 @@ function themeToggle() {
     const themeIndicator = document.getElementById("switch-ball"); 
     switchField.addEventListener("click", toggle);
     function toggle() {
+        document.body.classList.remove("amogus");
         if (theme == 1) {
             theme++;
             themeIndicator.style.transform = 'translateX(23px)';
-            document.body.classList.toggle("theme2")
+            document.body.classList.toggle("theme2");
         } else if (theme == 2) {
             theme++;
             themeIndicator.style.transform = 'translateX(46px)';
-            document.body.classList.toggle("theme2")
-            document.body.classList.toggle("theme3")
+            document.body.classList.toggle("theme2");
+            document.body.classList.toggle("theme3");
         } else {
             theme = 1;
             themeIndicator.style.transform = 'translateX(0px)';
-            document.body.classList.toggle("theme3")
+            document.body.classList.toggle("theme3");
         }
     }
 }
 themeToggle();
+
+function amogus() {
+    amogusEl.style.top = `${Math.floor(Math.random() * window.innerHeight)}px`;
+    amogusEl.style.left = `${Math.floor(Math.random() * window.innerWidth)}px`;
+}
+amogusEl.addEventListener("click", () => {document.body.classList.toggle("amogus")});
+window.addEventListener('blur', amogus);
+window.addEventListener('focus', amogus);
+window.onload = amogus;

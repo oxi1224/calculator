@@ -275,3 +275,70 @@ body{
         }
     }
 }
+#troll{
+    position: absolute;
+    z-index: 10;
+    content: '';
+    padding: 10px;
+    color: black;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+}
+.amogus{
+    background: url('images/amogus.webp');
+    .main-box{
+        .top-content{
+            .top-content-text{
+                h1{color: hsl(0, 0%, 100%);}
+                h3{color: hsl(0, 0%, 100%);}
+            }
+            .theme-switch{
+                .switch-num{color: hsl(0, 0%, 100%);}
+                #switch-field{
+                    background-color: hsl(0, 100%, 36%);
+                    #switch-ball{background-color: hsl(176, 100%, 44%);}
+                }
+            }
+        }
+        .calculator-box{
+            #output{
+                background-color: hsl(0, 100%, 36%);
+                color: hsl(182, 98%, 51%);
+                position: relative;
+                overflow: hidden;
+                &::before{
+                    position: absolute;
+                    right: 10px;
+                    top: 15px;
+                    content: '';
+                    padding: 40px 100px;
+                    border-radius: 40px / 100px;
+                    background-color: rgb(23, 216, 230);
+                    border: 1px solid black;
+                }
+                &>*{
+                    position: relative;
+                }
+            }
+            #input{
+                background-color: hsl(0, 100%, 36%);
+                td{
+                    background-color: hsl(0, 100%, 50%);
+                    box-shadow: 0 5px 0 0px hsl(0, 93%, 30%);
+                    color: hsl(0, 0%, 100%);
+                }
+                #reset, #del{
+                    background-color: hsl(184, 100%, 50%);
+                    box-shadow: 0 5px 0 0px hsl(184, 96%, 41%);
+                    color: black;
+                }
+                #equals{
+                    background-color: hsl(184, 100%, 50%);
+                    box-shadow: 0 5px 0 0px hsl(184, 96%, 41%);
+                    color: black;
+                }
+            }
+        }
+    }
+}
